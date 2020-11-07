@@ -20,6 +20,7 @@ import {ControlActionService} from "../services/control-action.service";
 import {ReviewsComponent} from './reviews/reviews.component';
 import {ArchivedComponent} from './archived/archived.component';
 import {CreateCustomPlanComponent} from './create-custom-plan/create-custom-plan.component';
+import {CreateEvaluationComponent} from './create-evaluation/create-evaluation.component';
 
 @NgModule({
   imports: [
@@ -31,6 +32,7 @@ import {CreateCustomPlanComponent} from './create-custom-plan/create-custom-plan
   declarations: [
     PlansComponent,
     CreatePlanComponent,
+    CreateEvaluationComponent,
     WorkspaceComponent,
     ActionsComponent,
     CharacteristicsComponent,

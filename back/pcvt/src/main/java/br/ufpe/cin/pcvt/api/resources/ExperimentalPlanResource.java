@@ -87,51 +87,51 @@ public class ExperimentalPlanResource {
         }
     }
 
-    @POST
-    @Path("custom")
-    @Consumes(MediaType.MULTIPART_FORM_DATA)
-    @Produces(APIConstants.APPLICATION_JSON)
-    public Response createCustomPlan(@FormDataParam("file") InputStream file,
-                                     @FormDataParam("file") FormDataContentDisposition fileDetails,
-                                     @FormDataParam("name") String name,
-                                     @FormDataParam("description") String description,
-                                     @FormDataParam("details") String details,
-                                     @Context ContainerRequestContext req) throws ApiException {
-
-        try {
-            byte[] bytes = IOUtils.toByteArray(file);
-
-            if(bytes.length > MAX_FILE_SIZE)
-                throw new ApiException(Response.Status.BAD_REQUEST,
-                        "Too large file");
-
-            Plan plan = new Plan();
-            plan.setName(name);
-            plan.setDescription(description);
-            plan.setFile(bytes);
-            plan.setFilename(fileDetails.getFileName());
-            plan.setCustomPlan(true);
-
-            User user = RequestContextUtils.extractUser(req);
-
-            Plan insertedPlan = experimentalPlanController.insert(plan, user.getId());
-            experimentalPlanController.moveToReadyToReview(insertedPlan);
-
-            ExperimentalPlanVO planVO = ExperimentalPlanVOConverter
-                    .getInstance().convertToVO(insertedPlan);
-
-            return Response.ok(planVO).build();
-        } catch (InvalidPlanStateTransitionException e) {
-            throw new ApiException(Response.Status.BAD_REQUEST,
-                    e.getMessage());
-        } catch (ApiException e) {
-            throw e;
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw new ApiException(Response.Status.INTERNAL_SERVER_ERROR,
-                    "Internal server error. It was not possible to save the experimental plan.");
-        }
-    }
+//    @POST
+//    @Path("custom")
+//    @Consumes(MediaType.MULTIPART_FORM_DATA)
+//    @Produces(APIConstants.APPLICATION_JSON)
+//    public Response createCustomPlan(@FormDataParam("file") InputStream file,
+//                                     @FormDataParam("file") FormDataContentDisposition fileDetails,
+//                                     @FormDataParam("name") String name,
+//                                     @FormDataParam("description") String description,
+//                                     @FormDataParam("details") String details,
+//                                     @Context ContainerRequestContext req) throws ApiException {
+//
+//        try {
+//            byte[] bytes = IOUtils.toByteArray(file);
+//
+//            if(bytes.length > MAX_FILE_SIZE)
+//                throw new ApiException(Response.Status.BAD_REQUEST,
+//                        "Too large file");
+//
+//            Plan plan = new Plan();
+//            plan.setName(name);
+//            plan.setDescription(description);
+//            plan.setFile(bytes);
+//            plan.setFilename(fileDetails.getFileName());
+//            plan.setCustomPlan(true);
+//
+//            User user = RequestContextUtils.extractUser(req);
+//
+//            Plan insertedPlan = experimentalPlanController.insert(plan, user.getId());
+//            experimentalPlanController.moveToReadyToReview(insertedPlan);
+//
+//            ExperimentalPlanVO planVO = ExperimentalPlanVOConverter
+//                    .getInstance().convertToVO(insertedPlan);
+//
+//            return Response.ok(planVO).build();
+//        } catch (InvalidPlanStateTransitionException e) {
+//            throw new ApiException(Response.Status.BAD_REQUEST,
+//                    e.getMessage());
+//        } catch (ApiException e) {
+//            throw e;
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            throw new ApiException(Response.Status.INTERNAL_SERVER_ERROR,
+//                    "Internal server error. It was not possible to save the experimental plan.");
+//        }
+//    }
 
     @POST
     @Path("/{id}")

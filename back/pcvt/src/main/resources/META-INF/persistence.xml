@@ -9,12 +9,15 @@
 
 		<properties>
 			<!-- JDBC properties -->
-			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/reviewer" />
-			<property name="javax.persistence.jdbc.user" value="postgres" />
-			<property name="javax.persistence.jdbc.password" value="r00t" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5431/reviewer" />
+			<property name="javax.persistence.jdbc.user" value="pcvt-admin" />
+			<property name="javax.persistence.jdbc.password" value="pcvt-password" />
+<!--			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/reviewer" />-->
+<!--			<property name="javax.persistence.jdbc.user" value="postgres" />-->
+<!--			<property name="javax.persistence.jdbc.password" value="r00t" />-->
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 
-			<!-- Hibernate properties -->
+			<!-- Hibernate properties-->
 			<property name="hibernate.show_sql" value="false" />
 			<property name="hibernate.format_sql" value="false" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />

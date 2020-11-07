@@ -16,6 +16,7 @@ import {AuthGuard} from "../guards/auth.guard";
 import {ReviewsComponent} from "./reviews/reviews.component";
 import {ArchivedComponent} from "./archived/archived.component";
 import {CreateCustomPlanComponent} from "./create-custom-plan/create-custom-plan.component";
+import {CreateEvaluationComponent} from './create-evaluation/create-evaluation.component';
 
 const planRoutes: Routes = [
     {
@@ -24,6 +25,7 @@ const planRoutes: Routes = [
             { path: '', component: PlansComponent },
             { path: 'create', component: CreatePlanComponent, canDeactivate: [CanDeactivateFormGuard], canActivate: [AuthGuard] },
             { path: 'create-custom', component: CreateCustomPlanComponent, canDeactivate: [CanDeactivateFormGuard], canActivate: [AuthGuard] },
+            { path: 'create-evaluation', component: CreateEvaluationComponent, canDeactivate: [CanDeactivateFormGuard], canActivate: [AuthGuard] },
             { path: 'archived', component: ArchivedComponent, canActivate: [AuthGuard] },
             { path: 'edit/:id', component: EditPlanComponent, canDeactivate: [CanDeactivateFormGuard], canActivate: [AuthGuard], resolve: { plan : PlanResolver}},
             { path: ':id/workspace', component: WorkspaceComponent, resolve: { plan: PlanResolver} },
