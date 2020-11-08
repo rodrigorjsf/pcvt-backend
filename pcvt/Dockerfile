@@ -6,6 +6,8 @@ ADD pom.xml /usr/app/
 
 WORKDIR /usr/app/
 
+EXPOSE 7007
+
 RUN mvn clean install
 
 CMD ["java", "-jar", "target/pcvt-1.0-SNAPSHOT.jar"]

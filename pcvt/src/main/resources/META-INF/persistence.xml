@@ -8,10 +8,14 @@
 		<class>br.ufpe.cin.pcvt.data.models.user.User</class>
 
 		<properties>
-			<!-- JDBC properties -->
-			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5431/reviewer" />
-			<property name="javax.persistence.jdbc.user" value="pcvt-admin" />
-			<property name="javax.persistence.jdbc.password" value="pcvt-password" />
+			<!-- JDBC properties LOCAL-->
+<!--			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5431/reviewer" />-->
+<!--			<property name="javax.persistence.jdbc.user" value="pcvt-admin" />-->
+<!--			<property name="javax.persistence.jdbc.password" value="pcvt-password" />-->
+			<!-- JDBC properties HEROKU -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://ec2-54-237-155-151.compute-1.amazonaws.com:5432/d7stc7nik93g3m" />
+			<property name="javax.persistence.jdbc.user" value="yxupaavifhhwzy" />
+			<property name="javax.persistence.jdbc.password" value="eea99d82555d8513154195bf838cde788cf887e2daacdbfa3f854c7fba030683" />
 <!--			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/reviewer" />-->
 <!--			<property name="javax.persistence.jdbc.user" value="postgres" />-->
 <!--			<property name="javax.persistence.jdbc.password" value="r00t" />-->
