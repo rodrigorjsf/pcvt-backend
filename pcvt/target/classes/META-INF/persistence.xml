@@ -1,37 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1"
-	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-	<persistence-unit name="br.ufpe.cin.pcvt">
-		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="br.ufpe.cin.pcvt">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-		<class>br.ufpe.cin.pcvt.data.models.user.User</class>
+        <class>br.ufpe.cin.pcvt.data.models.user.User</class>
 
-		<properties>
-			<!-- JDBC properties LOCAL-->
-<!--			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5431/reviewer" />-->
-<!--			<property name="javax.persistence.jdbc.user" value="pcvt-admin" />-->
-<!--			<property name="javax.persistence.jdbc.password" value="pcvt-password" />-->
-			<!-- JDBC properties HEROKU -->
-			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://ec2-54-237-155-151.compute-1.amazonaws.com:5432/d7stc7nik93g3m" />
-			<property name="javax.persistence.jdbc.user" value="yxupaavifhhwzy" />
-			<property name="javax.persistence.jdbc.password" value="eea99d82555d8513154195bf838cde788cf887e2daacdbfa3f854c7fba030683" />
-<!--			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/reviewer" />-->
-<!--			<property name="javax.persistence.jdbc.user" value="postgres" />-->
-<!--			<property name="javax.persistence.jdbc.password" value="r00t" />-->
-			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+        <properties>
+            <!-- JDBC properties LOCAL-->
+            <!--			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5431/reviewer" />-->
+            <!--			<property name="javax.persistence.jdbc.user" value="pcvt-admin" />-->
+            <!--			<property name="javax.persistence.jdbc.password" value="pcvt-password" />-->
+            <!-- JDBC properties HEROKU -->
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:postgresql://ec2-54-237-155-151.compute-1.amazonaws.com:5432/d7stc7nik93g3m?sslmode=require"/>
+            <property name="javax.persistence.jdbc.user" value="yxupaavifhhwzy"/>
+            <property name="javax.persistence.jdbc.password"
+                      value="eea99d82555d8513154195bf838cde788cf887e2daacdbfa3f854c7fba030683"/>
+            <!--			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/reviewer" />-->
+            <!--			<property name="javax.persistence.jdbc.user" value="postgres" />-->
+            <!--			<property name="javax.persistence.jdbc.password" value="r00t" />-->
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
 
-			<!-- Hibernate properties-->
-			<property name="hibernate.show_sql" value="false" />
-			<property name="hibernate.format_sql" value="false" />
-			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
-			<property name="hibernate.hbm2ddl.auto" value="update" />
-			
-			<!-- Disable second-level cache. -->  
-	        <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>  
-			<property name="hibernate.cache.use_query_cache" value="false" />
-			<property name="hibernate.cache.use_second_level_cache" value="false" />
-			
-		</properties>
-	</persistence-unit>
+            <!-- Hibernate properties-->
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+            <!-- Disable second-level cache. -->
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+
+        </properties>
+    </persistence-unit>
 </persistence>
