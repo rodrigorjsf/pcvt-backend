@@ -63,6 +63,8 @@ host: `ec2-54-237-155-151.compute-1.amazonaws.com`
 port: `5432`
 database: `d7stc7nik93g3m`
 
+*Base de dados hospedada no [Heroku](https://www.heroku.com/)*
+
 ## 2- Arquitetura do Sistema
 
 Este projeto segue um padrão arquitetural em camadas [[1](https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch01.html),[2](https://en.wikipedia.org/wiki/Multitier_architecture)] para fornecer uma API REST [[3](https://dzone.com/articles/intro-rest),[4](https://www.quora.com/What-are-RESTful-APIs-and-how-do-they-work),[5](https://blog.caelum.com.br/rest-principios-e-boas-praticas/)] ao módulo _frontend_ da aplicação. A camada mais externa do sistema (_Resources_) implementa os serviços REST (Jersey/JAX-RS), tendo esta camada a responsabilidade de validar os dados de entrada, assim como realizar as restrições de segurança necessárias (autenticação/autorização) no acesso aos serviços disponibilizados. A camada imediatamente abaixo (_Controllers_) é responsável pela execução da lógica de negócio de cada serviço, que incluem validações de negócio e transformação dos dados de entrada antes de atualizá-los. A última camada (_Persistence_) do modelo é responsável pelas funcionalidades diretas de acesso/atualização dos dados do sistema no banco de dados.
