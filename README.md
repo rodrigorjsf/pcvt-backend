@@ -22,6 +22,7 @@ Este projeto usa as seguintes tecnologias:
 - [Maven](https://maven.apache.org/)
 - [Hibernate](https://hibernate.org/)
 - [Docker](https://www.docker.com/)
+- [JUnit](https://junit.org/junit5/)
 
 ## 1- Ferramentas e Configurações
 
