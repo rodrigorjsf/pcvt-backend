@@ -1,6 +1,6 @@
 # PCVT Tool :: Backend
 
-*Esse repositório é uma cópia [Original](https://github.com/allan-mlpe/experiment-planning-tool), sendo usado como base para um Trabalho de Conclusão de Curso (TCC) na Universidade Católica de Pernambuco. O objetivo é agregar novas funcionalidades voltadas a avaliação de usabilidade de uma ferramenta orientado à validade de seus resultados.*
+*Esse repositório é uma cópia (reposotório [Original](https://github.com/allan-mlpe/experiment-planning-tool)), sendo usado como base para um Trabalho de Conclusão de Curso (TCC) na Universidade Católica de Pernambuco. O objetivo é agregar novas funcionalidades voltadas a avaliação de usabilidade de uma ferramenta orientado à validade de seus resultados.*
 
 Projeto de desenvolvimento do módulo _backend_ da aplicação **PCVT Tool**  implementado em linguagem de programação Java, com o objetivo de prover as funcionalidades necessárias para o módulo _frontend_ implementado no framework Angular.
 
