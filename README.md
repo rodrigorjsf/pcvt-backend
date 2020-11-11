@@ -103,7 +103,7 @@ src
 ├── main
 │   ├── java/br/ufpe/cin/pcvt
 │   │   ├── api                                      	-> classes comuns à camada de serviço (xxxxResource.java)
-│   │   ├── app                                   	 	-> classes de
+│   │   ├── app                                   	 	-> classes de execução
 │   │   ├── business                                 	-> classes da camada de negócio
 │   │   ├── controllers                              	-> classes qde controle
 │   │   ├── converters                               	-> classes de conversão
