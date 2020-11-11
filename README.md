@@ -107,14 +107,14 @@ src
 │   │   ├── business                                 	-> classes da camada de negócio
 │   │   ├── controllers                              	-> classes qde controle
 │   │   ├── converters                               	-> classes de conversão
-│   │   ├── data                              		 	-> classes das entidades/models principais e persistência das mesmas
+│   │   ├── data                              		 	  -> classes das entidades/models principais e persistência das mesmas
 │   │   ├── exceptions                               	-> classes de exceções
-│   │   ├── util                                 	 	->  classes utilitárias
+│   │   ├── util                                 	 	  ->  classes utilitárias
 │   │   └── validators                               	-> classes de validadores de dados
 │   ├── resources
 │   │   ├── json-resources/  	
-│   │       └── instrument_questions.json               -> arquivo json com questões do instrumento
-│   │   ├── META-INF                             		-> arquivo de manifesto do projeto
-│   │       └── persistance.xml                         -> arquivo de configuracao do driver do postgresql
-│   │   └── log4j.properties                    		-> arquivo de propriedades de log
+│   │       └── instrument_questions.json             -> arquivo json com questões do instrumento
+│   │   ├── META-INF                             		  -> arquivo de manifesto do projeto
+│   │       └── persistance.xml                       -> arquivo de configuracao do driver do postgresql
+│   │   └── log4j.properties                    		  -> arquivo de propriedades de log
 ```
